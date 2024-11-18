@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovix - inicio de sesion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./src/Vista_mobile.svg')] md:bg-[url('./src/fondo.svg')] bg-cover bg-center bg-no-repeat bg-fixed">
+    
+    <!-- imagen esquina derecha - informacion de la escuela -->
+    <div class="flex justify-end items-center absolute top-0 right-0">
+        <img src="./src/fragmento.svg" alt="" class="cursor-pointer w-[130px] h-[130px] md:w-[180px] md:h-[180px]" onclick="openModal()">
+    </div>
+
+     <!-- Ventana Modal -->
+     <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-10">
+        <div id="modalContent" class="bg-white w-11/12 max-w-md p-5 rounded-lg shadow-lg overflow-y-auto max-h-[80vh]">
+            <img class="mb-4" src="./src/eosem_uno.svg" alt="eosem">
+            <h2 class="text-xl font-bold mb-4 text-blue-500">ESCUELA OBRA SOCIAL EL MILAGRO</h2>
+            <p class="mb-4 text.bg-blue-500 font-bold">QUIENES SOMOS.</p>
+            <p class="mb-4" >
+                La Escuela Obra Social el Milagro, liderada por los Misioneros Redentoristas, forma integralmente y en los valores humano cristianos a estudiantes de preescolar y básica primaria, 
+                a través de un modelo pedagógico humanista, de estrategias didácticas flexibles para la diversidad de estudiantes y de ambientes escolares sanos que favorecen el desarrollo de competencias, 
+                habilidades para la vida y la consolidación del proyecto de vida.
+            </p>
+            <p class="mb-4 text.bg-blue-500 font-bold">NUESTRA VISION</p>
+            <p>
+                Consolidarnos como una institución innovadora y de alta calidad en educación preescolar y basica primaria, reconocida por la excelente formación integral, 
+                humano y cristiana por competencias.
+            </p>
+            <p class="mb-4 mt-4 text.bg-blue-500 font-bold">NUESTRA UBICACION</p>
+            <p>
+                - Ubicación: Cl. 23 #15a-8, Guadalajara de Buga, Valle del Cauca <br>
+                - Telefono: (2) 239 16 41 <br>
+                - Correo: escuelaelmilagrobuga@hotmail.com <br>
+                - Horario: L-V: 6am a 6pm
+            </p>
+            <button onclick="closeModal()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-100 hover:text-black mt-4">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- formulario del inicio de sesion -->
+    <main class="grid place-items-center items-center text-center h-[100vh] w-[100%]">
+        <form id="loginForm" class="flex justify-center items-center flex-col gap-1 bg-white bg-opacity-10 backdrop-blur-md shadow-lg rounded-lg p-2 max-w-sm mx-auto">
+            <div>
+                <img class="w-[190px] h-[120px]" src="./src/logotipo.svg" alt="innovix">
+            </div>
+
+            <div class="grid place-items-center grid-cols-1">
+                <!-- campos de usuario y contraseña -->
+                <input class="bg-[#72bcfa] rounded-lg text-center m-1 placeholder-white p-1 text-[12px] w-[200px]" 
+                type="text" name="usuario" id="username" placeholder=" Ingrese su usuario" required>
+                <input class="bg-[#72bcfa] rounded-lg text-center m-2 placeholder-white p-1 text-[12px] w-[200px]" 
+                type="password" name="contraseña" id="password" placeholder="Ingrese su contraseña" required>
+                <!-- botom -->
+                <button class=" flex items-center justify-center text-[12px] w-[100px] h-[30px] bg-[#0395fa] text-white p-1 font-bold rounded-lg shadow-lg shadow-blue-800 transition 
+                 transform hover:translate-y-0.2 active:translate-y-1 active:shadow-none m-1">INGRESAR</button>
+                 <!-- mensaje error de autenticacion -->
+                 <div id="error" class="error"></div>
+            </div>
+            <div class="m-4">
+                <p class="font-bold text-[12px]">PLATAFORMA EDUCATIVA</p>
+                <p class="text-[12px]">2024</p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="flex items-center absolute bottom-0 left-0 m-3 ">
+            <img class="w-[40px] h-[40px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" src="./src/btn_facebook.svg" alt="facebook">
+            <img class="w-[40px] h-[40px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" src="./src/btn_instagram.svg" alt="facebook">
+            <img class="w-[40px] h-[40px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" src="./src/btn_whatsapp.svg" alt="facebook">
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

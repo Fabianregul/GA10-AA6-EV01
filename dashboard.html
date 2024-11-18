@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD EOSEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./src/fondo_dashboard.svg')] md:bg-[url('./src/fondo_dashboard.svg')] bg-cover bg-center bg-no-repeat bg-fixed" >
+    
+    <!-- imagen dashboard -->
+    <div class="absolute top-0 left-0">
+        <img class="w-[190px] h-[100px]" src="./src/fragmento_dashboard.png" alt="dashboard eosem">
+    </div>
+    <!-- imagen logotipo -->
+    <div class="absolute bottom-0 right-0 ">
+        <img class="w-[120px] h-[80px] m-2" src="./src/logotipo.svg" alt="logotipo eosem">
+    </div>
+    <main>
+        <div class="grid place-items-center w-[100%] h-[100vh]">
+            <div class="text-center w-[60%]">
+                <span class="text-[12px] text-[#0680d5] font-bold uppercase">¡Bienvenido al universo del conocimiento y el aprendizaje!</span>
+                <p class="text-[12px]">
+                    Explora una plataforma educativa integral para potenciar tu desarrollo físico, mental y académico. 
+                    Con guías interactivas y juegos divertidos, alcanzarás tus metas y liberarás tu máximo potencial en diversas áreas del conocimiento. ¡Iniciemos ya!
+                </p>
+
+                <!-- tarjetas -->
+                <div class="flex justify-center items-center m-2">
+                    <img class="w-[150px] h-[140px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer mr-2" 
+                    src="./src/guias_icon.svg" alt="guias digitales" onclick="openDashboardModal('modalGuias')">
+                    <img class="w-[150px] h-[140px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" 
+                    src="./src/juegos_icon.svg" alt="juegoTrivial" onclick="openDashboardModal('modalJuegos')">
+                </div>
+                
+                <!-- Modal 1: Guías Digitales -->
+                <div id="modalGuias" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center hidden z-10">
+                    <div class="bg-white w-3/4 md:w-1/2 p-6 rounded shadow-lg relative overflow-auto bg-[url('./src/fondo_modal.svg')]">
+                        <h2 class="text-2xl font-bold mb-4">GUIAS DIGITALES</h2>
+                        <p>Accede a nuestras guías digitales interactivas para mejorar tu conocimiento en varias áreas educativas.</p>
+                        <div class="flex flex-col m-4">
+                            <a class="hover:text-blue-400 hover:font-bold cursor-pointer" href="#">1. Guia educacion fisica</a>
+                            <a class="hover:text-blue-400 hover:font-bold cursor-pointer" href="#">2. Guia ingles</a>
+                            <a class="hover:text-blue-400 hover:font-bold cursor-pointer" href="#">3. Guia matematicas</a>
+                        </div>
+                        <button 
+                            onclick="closeDashboardModal('modalGuias')" 
+                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-100 hover:text-black mt-4">Cerrar</button>
+                    </div>
+                </div>
+
+                <!-- Modal 2: Juego Trivial -->
+                <div id="modalJuegos" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center hidden z-10">
+                    <div class="bg-white w-3/4 md:w-1/2 p-6 rounded shadow-lg relative overflow-auto bg-[url('./src/fondo_modal.svg')]">
+                        <h2 class="text-2xl font-bold mb-4">JUEGOS EOSEM</h2>
+                        <p>Pon a prueba tus conocimientos con juegos interactivos diseñados para aprender de manera divertida.</p>
+                        <div class="flex flex-col m-4">
+                            <a class="hover:text-blue-400 hover:font-bold cursor-pointer" href="#">1. Juego trivial</a>
+                            <a class="hover:text-blue-400 hover:font-bold cursor-pointer" href="#">2. Juego de motricidad</a>
+                            <a class="hover:text-blue-400 hover:font-bold cursor-pointer" href="#">3. Juego triqui</a>
+                        </div>
+                        <button 
+                            onclick="closeDashboardModal('modalJuegos')" 
+                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-100 hover:text-black mt-4">Cerrar</button>
+                    </div>
+                </div>
+
+                <!-- pie de pagina -->
+                <div>
+                    <span class="text-[12px] text-[#0680d5] font-bold uppercase">¡Impulsemonos hacia tus metas!</span>
+                    <p class="text-[11px]">Dale clic a la guía que deseas empezar</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="flex items-center absolute bottom-0 left-0 m-3 ">
+            <img class="w-[40px] h-[40px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" src="./src/btn_facebook.svg" alt="facebook">
+            <img class="w-[40px] h-[40px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" src="./src/btn_instagram.svg" alt="facebook">
+            <img class="w-[40px] h-[40px] transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer" src="./src/btn_whatsapp.svg" alt="facebook">
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
