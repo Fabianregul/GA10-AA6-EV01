@@ -37,7 +37,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
   if (user) {
       alert('Inicio de sesión exitoso');
       // Redirigir a otra página o mostrar contenido protegido
-      window.location.href = '/dashboard.html'; // Simulación de redirección
+      window.location.href = "dashboard.html"; // Simulación de redirección
   } else {
       errorDiv.textContent = 'Nombre de usuario o contraseña incorrectos.';
   }
